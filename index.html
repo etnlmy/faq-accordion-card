@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script defer src="js/accordion.js"></script>
+
+    <title>FAQ Accordion Card</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card-illustration"></div>
+      <div class="card">
+        <div class="card__title">FAQ</div>
+
+        <ul class="accordion">
+          <li class="accordion__item">
+            <button
+              class="accordion__heading"
+              aria-expanded="false"
+              aria-controls="pane1"
+            >
+              <div class="accordion__title">
+                How many team members can I invite?
+              </div>
+              <img src="images/icon-arrow-down.svg" aria-hidden="true" />
+            </button>
+            <div id="pane1" class="accordion__content text-neutral-dark-blue">
+              <p>
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </div>
+          </li>
+
+          <li class="accordion__item accordion__item--active">
+            <button
+              class="accordion__heading"
+              aria-expanded="false"
+              aria-controls="pane2"
+            >
+              <div class="accordion__title">
+                What is the maximum file upload size?
+              </div>
+              <img src="images/icon-arrow-down.svg" aria-hidden="true" />
+            </button>
+            <div id="pane2" class="accordion__content text-neutral-dark-blue">
+              <p>
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </div>
+          </li>
+
+          <li class="accordion__item">
+            <button
+              class="accordion__heading"
+              aria-expanded="false"
+              aria-controls="pane3"
+            >
+              <div class="accordion__title">How do I reset my password?</div>
+              <img src="images/icon-arrow-down.svg" aria-hidden="true" />
+            </button>
+            <div id="pane3" class="accordion__content text-neutral-dark-blue">
+              <p>
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </div>
+          </li>
+
+          <li class="accordion__item">
+            <button
+              class="accordion__heading"
+              aria-expanded="false"
+              aria-controls="pane4"
+            >
+              <div class="accordion__title">Can I cancel my subscription?</div>
+              <img src="images/icon-arrow-down.svg" aria-hidden="true" />
+            </button>
+            <div id="pane4" class="accordion__content text-neutral-dark-blue">
+              <p>
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </div>
+          </li>
+
+          <li class="accordion__item">
+            <button
+              class="accordion__heading"
+              aria-expanded="false"
+              aria-controls="pane5"
+            >
+              <div class="accordion__title">
+                Do you provide additional support?
+              </div>
+              <img src="images/icon-arrow-down.svg" aria-hidden="true" />
+            </button>
+            <div id="pane5" class="accordion__content text-neutral-dark-blue">
+              <p>
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
