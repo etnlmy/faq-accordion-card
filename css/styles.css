@@ -14,9 +14,12 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 12px;
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 ul {
@@ -48,13 +51,22 @@ button {
   margin: 40px 24px;
 }
 
-.card-illustration {
+.card-container::before {
   position: relative;
-  background: url(../images/illustration-woman-online-mobile.svg) -20px 0px no-repeat,
-    url(../images/bg-pattern-mobile.svg) 8px 108px no-repeat;
-  height: 212px;
-  width: 257px;
-  margin: 0 auto;
+  content: url(../images/illustration-woman-online-mobile.svg);
+  top: -12px;
+  left: calc(50% - 150px);
+}
+
+.card-container::after {
+  position: absolute;
+  content: url(../images/bg-pattern-mobile.svg);
+  top: 135px;
+  left: calc(50% - 123px);
+}
+
+.card-illustration {
+  
 }
 
 .card {
