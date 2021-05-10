@@ -6,6 +6,7 @@
 
 :root {
   --text-primary-blue: hsl(238, 29%, 16%);
+  --text-primary-red: hsl(14, 88%, 65%);
   --text-neutral-darker-blue: hsl(237, 12%, 33%);
 }
 
@@ -33,7 +34,7 @@ button {
 
 /* Colors */
 .text-primary-red {
-  color: hsl(14, 88%, 65%);
+  color: var(--text-primary-red);
 }
 
 .text-neutral-dark-blue {
@@ -65,8 +66,9 @@ button {
   left: calc(50% - 123px);
 }
 
-.card-illustration {
-  
+.card-container::before,
+.card-container::after {
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .card {
@@ -130,4 +132,43 @@ button {
 
 .accordion__item--active .accordion__content {
   display: block;
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    position: relative;
+    max-width: 920px;
+    margin: 129px auto 40px auto;
+  }
+
+  .card-container::after {
+    content: none;
+  }
+
+  .card-container::before {
+    content: url("../images/illustration-box-desktop.svg");
+    position: absolute;
+    top: 203px;
+    left: -93px;
+  }
+
+  .card {
+    margin-top: 0;
+    padding: 65px 95px 83px calc(50% + 15px);
+    background: url(../images/illustration-woman-online-desktop.svg) -78px 66px no-repeat,
+      url(../images/bg-pattern-desktop.svg) -571px -298px no-repeat;
+    background-color: white;
+  }
+
+  .accordion__item button {
+    padding-right: 14px;
+  }
+
+  .accordion__item button:hover {
+    color: var(--text-primary-red);
+  }
+
+  .card__title {
+    text-align: start;
+  }
 }
